@@ -20,5 +20,4 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['uglify']);
   // grunt.registerTask('default', ['uglify']);
 
-
 };
