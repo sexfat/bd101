@@ -1,4 +1,4 @@
-$num :30em;
+$num :1em;
 $red-color: #f00;
 $blue-color: blue;
 
@@ -6,6 +6,15 @@ $blue-color: blue;
 h1 {
     font-size: $num;
     color: $red-color;
+}
+.box {
+ span {
+   color: #f00;
+   .box1 {
+       margin:10px;
+       font-size: 100px;
+   }
+ }
 }
 
 h2 {

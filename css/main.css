@@ -1,9 +1,15 @@
 h1 {
-  font-size: 30em;
+  font-size: 1em;
   color: #f00; }
 
+.box span {
+  color: #f00; }
+  .box span .box1 {
+    margin: 10px;
+    font-size: 100px; }
+
 h2 {
-  font-size: 30em;
+  font-size: 1em;
   color: blue; }
 
 span {
