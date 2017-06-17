@@ -149,3 +149,16 @@ h4 {
 h5 {
     font-size: $font-base * 1;
 }
+//if else 判斷式
+
+@mixin box-width($width) {
+    .box-wrapper {
+        @if $width>=100px {
+            width: $width;
+        }
+        @else {
+            width: $width *2;
+        }
+    }
+}
+@include box-width(100px);
