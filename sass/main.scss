@@ -48,14 +48,55 @@ span {
 }
 
 @include text2(10px, 20px);
-
-
-
 @mixin widths ($num-list, $num-width) {
-    #{$num-list} {
+    .row-#{$num-list} {
         width: $num-width;
     }
 }
 
+@include widths (classname, 100px);
+//extend
+.box {
+    width: 100px;
+    height: 50px;
+    border: 1px solid #f00;
+}
 
-@include widths (classname , 100px);
+//extend
+.wrapper {
+    @extend .box;
+}
+
+//＆寫法
+.box2 {
+    color: blue;
+    &.dof {
+        margin: 10px;
+    }
+}
+
+a {
+    color: green;
+    &:hover {
+        color: red;
+    }
+}
+
+//占位選擇器
+%box1 {
+    text-align: center;
+    width: 100px;
+    padding: 20px;
+}
+
+.box4 {
+    @extend %box1;
+}
+
+.box5 {
+    @extend %box1;
+}
+
+.box6 {
+    @extend %box1;
+}
