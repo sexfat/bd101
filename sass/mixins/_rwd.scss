@@ -1,0 +1,20 @@
+@mixin respond-rwd ($breakpoint) {
+    @if $breakpoint=="moblie" {
+        @media all and (max-width: $moblie) {
+            @content;
+        }
+    }
+    @else if $breakpoint == "tablet" {
+        @media all and (min-width: $tablet-min) and(max-width: $tablet) {
+            @content;
+        }
+    }
+    @else if $breakpoint=="desktop" {
+        @media all and (min-width: $desktop) {
+            @content;
+        }
+    }
+}
+
+
+

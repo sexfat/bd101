@@ -1,4 +1,11 @@
 @import "base/var";
+@import "mixins/mixin";
+@import "layout/moblie";
+
+
+
+
+
 h1 {
     font-size: $num;
     color: $red-color;
@@ -162,3 +169,11 @@ h5 {
     }
 }
 @include box-width(100px);
+
+
+
+
+ 
+
+
+
