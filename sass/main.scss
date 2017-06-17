@@ -1,18 +1,17 @@
 @import "base/var";
-
-
 h1 {
     font-size: $num;
     color: $red-color;
 }
+
 .box {
- span {
-   color: #f00;
-   .box1 {
-       margin:10px;
-       font-size: 100px;
-   }
- }
+    span {
+        color: #f00;
+        .box1 {
+            margin: 10px;
+            font-size: 100px;
+        }
+    }
 }
 
 h2 {
@@ -22,4 +21,19 @@ h2 {
 
 span {
     margin: 10px;
+}
+
+@mixin text1($nums, $colors) {
+    span {
+        font-size: $nums;
+        color: $colors;
+        dd {
+            text-align: center;
+        }
+    }
+}
+
+@include text1(1em, #000);
+.box2 {
+    @include text1(2em, #f00);
 }

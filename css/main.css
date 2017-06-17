@@ -14,3 +14,15 @@ h2 {
 
 span {
   margin: 10px; }
+
+span {
+  font-size: 1em;
+  color: #000; }
+  span dd {
+    text-align: center; }
+
+.box2 span {
+  font-size: 2em;
+  color: #f00; }
+  .box2 span dd {
+    text-align: center; }
