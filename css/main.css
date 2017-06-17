@@ -53,3 +53,19 @@ a {
   text-align: center;
   width: 100px;
   padding: 20px; }
+
+h1 {
+  font-size: 30px;
+  width: 30px; }
+
+h2 {
+  font-size: 20px;
+  width: 30px; }
+
+h3 {
+  font-size: 410px;
+  width: 12em;
+  padding: 20em; }
+
+h4 {
+  font: 10; }
