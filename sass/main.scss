@@ -175,8 +175,24 @@ h5 {
 
 .contents {
     @include contents (100px) {
-      .box1 {
-        text-align: center;
-      }
-    };
+        .box1 {
+            text-align: center;
+        }
+    }
+    ;
 }
+
+//for 迴圈
+
+$for_num: 100;
+
+@for $i from 1 through $for_num {
+    .col_#{$i} {
+        width: 60px * $i;
+    }
+}
+
+
+
+
+
