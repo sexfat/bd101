@@ -1,0 +1,9 @@
+@import "../base/var";
+@import "../mixins/rwd ";
+
+
+ @include respond-rwd (mobile) {
+   .box {
+     font-size: 18px;
+   }
+ }

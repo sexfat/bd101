@@ -1,12 +1,7 @@
 @import "base/var";
 @import "mixins/mixin";
-@import "layout/moblie";
+@import "layout/mobile";
 @import "layout/desktop";
-
-
-
-
-
 h1 {
     font-size: $num;
     color: $red-color;
@@ -157,8 +152,8 @@ h4 {
 h5 {
     font-size: $font-base * 1;
 }
-//if else 判斷式
 
+//if else 判斷式
 @mixin box-width($width) {
     .box-wrapper {
         @if $width>=100px {
@@ -169,12 +164,19 @@ h5 {
         }
     }
 }
+
 @include box-width(100px);
+//@content
+@mixin contents ($widths-num) {
+    width: $widths-num;
+    height: ($widths-num / 2);
+    @content;
+}
 
-
-
-
- 
-
-
-
+.contents {
+    @include contents (100px) {
+      .box1 {
+        text-align: center;
+      }
+    };
+}

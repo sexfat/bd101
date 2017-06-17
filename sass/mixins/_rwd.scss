@@ -1,6 +1,6 @@
 @mixin respond-rwd ($breakpoint) {
-    @if $breakpoint=="moblie" {
-        @media all and (max-width: $moblie) {
+    @if $breakpoint =="mobile" {
+        @media all and (max-width: $mobile) {
             @content;
         }
     }
