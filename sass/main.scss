@@ -23,28 +23,27 @@ span {
     margin: 10px;
 }
 
-
 //null
-@mixin text1($nums, $colors ,$dir:null) {
+@mixin text1($nums, $colors, $dir, $margins:null) {
     span {
         font-size: $nums;
         color: $colors;
-        dd {
+        margin: $margins dd {
             text-align: $dir;
         }
     }
 }
 
-@include text1(1em, #000);
+@include text1(1em, #000, center);
 .box2 {
-    @include text1(2em, #f00);
+    @include text1(2em, #f00, center);
 }
 
 //預設值
 @mixin text2($marginleft:20px, $margintop:40px) {
     span {
-        margin-left:$marginleft;
-        margin-top:$margintop;
+        margin-left: $marginleft;
+        margin-top: $margintop;
     }
 }
 
@@ -52,3 +51,11 @@ span {
 
 
 
+@mixin widths ($num-list, $num-width) {
+    #{$num-list} {
+        width: $num-width;
+    }
+}
+
+
+@include widths (classname , 100px);

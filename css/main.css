@@ -17,12 +17,19 @@ span {
 
 span {
   font-size: 1em;
-  color: #000; }
+  color: #000;
+  margin: dd;
+    margin-text-align: center; }
 
 .box2 span {
   font-size: 2em;
-  color: #f00; }
+  color: #f00;
+  margin: dd;
+    margin-text-align: center; }
 
 span {
   margin-left: 10px;
   margin-top: 20px; }
+
+classname {
+  width: 100px; }
