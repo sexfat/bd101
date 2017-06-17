@@ -18,11 +18,11 @@ span {
 span {
   font-size: 1em;
   color: #000; }
-  span dd {
-    text-align: center; }
 
 .box2 span {
   font-size: 2em;
   color: #f00; }
-  .box2 span dd {
-    text-align: center; }
+
+span {
+  margin-left: 10px;
+  margin-top: 20px; }

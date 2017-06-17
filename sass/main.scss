@@ -23,12 +23,14 @@ span {
     margin: 10px;
 }
 
-@mixin text1($nums, $colors) {
+
+//null
+@mixin text1($nums, $colors ,$dir:null) {
     span {
         font-size: $nums;
         color: $colors;
         dd {
-            text-align: center;
+            text-align: $dir;
         }
     }
 }
@@ -37,3 +39,16 @@ span {
 .box2 {
     @include text1(2em, #f00);
 }
+
+//預設值
+@mixin text2($marginleft:20px, $margintop:40px) {
+    span {
+        margin-left:$marginleft;
+        margin-top:$margintop;
+    }
+}
+
+@include text2(10px, 20px);
+
+
+
