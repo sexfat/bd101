@@ -183,16 +183,20 @@ h5 {
 }
 
 //for 迴圈
-
 $for_num: 100;
-
 @for $i from 1 through $for_num {
     .col_#{$i} {
         width: 60px * $i;
     }
 }
 
-
-
-
-
+// grid 格線
+@mixin grid-line ($cols) {
+    @for $i from 1 through $cols {
+        .col-#{$i} {
+            width: ($i / $cols) * 100%;
+        }
+    }
+}
+/****** grid  ******/
+@include grid-line(12);
