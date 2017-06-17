@@ -1,6 +1,9 @@
 @media all and (max-width: 600px) {
   .box, .wrapper {
     font-size: 18px; } }
+@media all and (min-width: 1200px) {
+  .box, .wrapper {
+    font-size: 12px; } }
 h1 {
   font-size: 10em;
   color: #f09; }
