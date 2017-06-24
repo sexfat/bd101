@@ -6,7 +6,7 @@ module.exports = function (grunt) {
     //watch
     watch: {
       css: {
-        files: ['sass/*.scss', 'sass/**/*.scss' , 'sass/**/**/*.scss'],
+        files: ['sass/*.scss', 'sass/**/*.scss', 'sass/**/**/*.scss'],
         tasks: ['sass']
       },
       html: {
@@ -17,19 +17,20 @@ module.exports = function (grunt) {
         files: ['js/*.js']
       },
       bake: {
-                files: ['app/**/*.html'],
-                tasks: ['bake']
-            }
+        files: ['app/**/*.html'],
+        tasks: ['bake']
+      }
     },
     //bake
-      bake: {
-            build: {
-                files: {
-                    "main.html": "app/main.html",
-                    "aboutus.html" : "app/aboutus.html"
-                }
-            }
-        },
+    bake: {
+      build: {
+        files: {
+          "main.html": "app/main.html",
+          "aboutus.html": "app/aboutus.html",
+          "tween.html": "app/tween.html"
+        }
+      }
+    },
 
     //sass
     sass: {
@@ -77,7 +78,7 @@ module.exports = function (grunt) {
 
 
   // Default task(s).
-  grunt.registerTask('default', ['browserSync' ,'watch' , 'bake']);
+  grunt.registerTask('default', ['browserSync', 'watch', 'bake']);
   // grunt.registerTask('default', ['uglify']);
 
 };
