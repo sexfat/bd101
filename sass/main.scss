@@ -235,15 +235,34 @@ $for_num: 100;
 @include margins(right, 20);
 @include margins(top, 200);
 // each 寫法 
-
-
 @mixin bg-images ($imagesname...) {
     @each $names in $imagesname {
         .#{$names} {
             background-image: url('images/#{$names}.jpg')
         }
-      }
     }
+}
+
+@include bg-images(test1,
+test2,
+test3,
+test4,test5);
+
+//while
+
+$li-amount : 7;
+
+@while $li-amount > 5 {
+
+ li:nth-child(#{$li-amount}) {
+   margin-left : 1px * $li-amount ;
+ } 
+  $li-amount : $li-amount - 1;
+}
 
 
- @include bg-images(test1,test2,test3,test4);  
+
+
+
+
+

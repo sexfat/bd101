@@ -1138,3 +1138,12 @@ h5 {
 
 .test4 {
   background-image: url("images/test4.jpg"); }
+
+.test5 {
+  background-image: url("images/test5.jpg"); }
+
+li:nth-child(7) {
+  margin-left: 7px; }
+
+li:nth-child(6) {
+  margin-left: 6px; }
