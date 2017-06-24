@@ -5806,3 +5806,11 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
+.wrapper .section {
+  width: 100%;
+  height: 100vh;
+  color: #000;
+  font-weight: 100; }
+.wrapper .section_01 {
+  text-align: center;
+  padding-top: 240px; }
