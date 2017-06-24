@@ -198,5 +198,52 @@ $for_num: 100;
         }
     }
 }
+
+
 /****** grid  ******/
+
 @include grid-line(12);
+// @mixin push 
+// .margin-left-10 {
+//   margin-left:10px;
+// } 
+// .margin-left-9 {
+//   margin-left: 9px;
+// }
+// .margin-left-8 {
+//   margin-left: 8px;
+// }
+// .margin-left-10-1 
+@mixin margin-left($cols) {
+    @for $i from $cols through 1 {
+        //索引值	//起始值	//結束值
+        .margin-left-#{$i} {
+            margin-left: $i px;
+        }
+    }
+}
+
+@include margin-left(10);
+@mixin margins($dis, $num) {
+    @for $i from 1 through $num {
+        .margin-#{$dis}-#{$i} {
+            margin-#{$dis}: $i+px;
+        }
+    }
+}
+
+@include margins(right, 20);
+@include margins(top, 200);
+// each 寫法 
+
+
+@mixin bg-images ($imagesname...) {
+    @each $names in $imagesname {
+        .#{$names} {
+            background-image: url('images/#{$names}.jpg')
+        }
+      }
+    }
+
+
+ @include bg-images(test1,test2,test3,test4);  
