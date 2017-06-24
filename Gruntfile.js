@@ -15,8 +15,21 @@ module.exports = function (grunt) {
       },
       js: {
         files: ['js/*.js']
-      }
+      },
+      bake: {
+                files: ['app/**/*.html'],
+                tasks: ['bake']
+            }
     },
+    //bake
+      bake: {
+            build: {
+                files: {
+                    "main.html": "app/main.html",
+                    "aboutus.html" : "app/aboutus.html"
+                }
+            }
+        },
 
     //sass
     sass: {
@@ -60,10 +73,11 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-browser-sync');
+  grunt.loadNpmTasks('grunt-bake');
 
 
   // Default task(s).
-  grunt.registerTask('default', ['browserSync' ,'watch']);
+  grunt.registerTask('default', ['browserSync' ,'watch' , 'bake']);
   // grunt.registerTask('default', ['uglify']);
 
 };
